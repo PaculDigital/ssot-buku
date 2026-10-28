@@ -1,10 +1,11 @@
 # SSOT Buku — Pintu Tunggal Skill Buku
 
-**Status: DRAF v0.1 (28 Okt 2026). Belum live.** Draf ini ditulis sesudah
-putusan final P-01..P-13 dan koreksi standar (Bagian I inventaris). Yang BELUM
-terjadi: arsip skill lama di VPS, penyambungan ke web, dan deploy. Sampai tiga
-itu terjadi, skill lama masih yang berlaku di lapangan — dokumen ini adalah
-spesifikasi yang disetujui, bukan mesin yang berjalan.
+**Status: v0.2 (29 Okt 2026). Skill Hermes aktif.** Ditulis sesudah putusan
+final P-01..P-13 dan koreksi standar (Bagian I inventaris). Arsip skill lama di
+VPS SUDAH terjadi (28 Okt 2026, 87 berkas utuh) dan skill ini SUDAH dikenali
+Hermes sebagai skill aktif (frontmatter + references/). Yang BELUM terjadi:
+penyambungan ke web dan deploy. Mulai sekarang kerja buku pakai SSOT ini,
+bukan skill lama.
 
 ## Peta: mana yang dipakai untuk apa
 
@@ -22,9 +23,10 @@ spesifikasi yang disetujui, bukan mesin yang berjalan.
 | Ilustrasi / infografis / diagram | Aturan visual di profil jenis + inti (gaya per P-01) |
 
 **Jangan baca skill lama untuk produksi baru.** Skill lama (`buku-referensi`,
-`buku-monograf`, `buku-ajar-obe`, `buku-umum`, `book-chapter` di VPS) akan
-dipindah ke arsip baca-saja. Bila isi dokumen ini bertentangan dengan skill
-lama, dokumen ini yang menang (putusan Boss 28 Okt 2026).
+`buku-monograf`, `buku-ajar-obe`, `buku-umum`, `book-chapter`) SUDAH dipindah
+ke arsip baca-saja (`.archive/skill-buku-28okt2026/`, 87 berkas utuh). Bila isi
+dokumen ini bertentangan dengan skill lama, dokumen ini yang menang (putusan
+Boss 28 Okt 2026).
 
 ## Cara pakai (agen / operator / mesin)
 
@@ -82,6 +84,9 @@ lama, dokumen ini yang menang (putusan Boss 28 Okt 2026).
   deploy. Item TERBUKA: target halaman ajar (menunggu ukur buku nyata),
   target halaman umum (opsi: naikkan kata/bab atau turunkan target dari 170+),
   profil anak/pendidikan (PARSIAL).
+- **v0.2 (29 Okt 2026):** status diperbaiki (arsip selesai, skill Hermes aktif);
+  checker mencari profil di 2 tempat (root + references/) agar tahan susunan
+  skill Hermes; uji gigi lolos (profil hilang jadi ERROR, angka rusak jadi ERROR).
 - **Aturan tata kelola:** ubah di SSOT, bukan di skill lama. Setiap perubahan:
   changelog + tanggal + putusan Boss yang menguncinya. Review agen Boss tetap
   berlaku (Wulan verifikasi ke berkas nyata sebelum memperbaiki).

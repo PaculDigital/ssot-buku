@@ -13,6 +13,8 @@ import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+# Profil disimpan di references/ (susunan skill Hermes); cari di dua tempat.
+DIR_CARI = [HERE, os.path.join(HERE, "references")]
 
 JENIS = ["referensi", "monograf", "ajar", "umum", "chapter", "anak",
          "pendidikan"]
@@ -24,8 +26,13 @@ WAJIB_LABEL = ["[STANDAR]", "[HOUSE]", "[GATE]"]
 
 
 def baca_profil(jenis):
-    path = os.path.join(HERE, "PROFIL-%s.md" % jenis)
-    if not os.path.exists(path):
+    path = None
+    for d in DIR_CARI:
+        c = os.path.join(d, "PROFIL-%s.md" % jenis)
+        if os.path.exists(c):
+            path = c
+            break
+    if path is None:
         return None
     with open(path, encoding="utf-8") as f:
         return f.read()
